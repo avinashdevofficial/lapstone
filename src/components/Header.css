@@ -146,6 +146,20 @@
   display: none;
 }
 
+.desktop-only {
+  display: flex;
+}
+
+.mobile-auth-links {
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.mobile-auth-links .accent {
+  color: var(--accent-primary);
+}
+
 .search-overlay {
   position: absolute;
   top: 100%;
@@ -237,7 +251,8 @@
     display: flex;
   }
 
-  .search-btn {
+  .search-btn,
+  .desktop-only {
     display: none;
   }
 

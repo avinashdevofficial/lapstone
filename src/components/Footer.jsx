@@ -37,24 +37,25 @@ function Footer() {
           </div>
 
           <div className="footer-links">
-            <h4 className="footer-title">Quick Links</h4>
+            <h4 className="footer-title">Shop</h4>
             <ul>
               <li><Link to="/products">All Laptops</Link></li>
               <li><Link to="/products?category=gaming">Gaming Laptops</Link></li>
               <li><Link to="/products?category=business">Business Laptops</Link></li>
               <li><Link to="/products?category=ultrabook">Ultrabooks</Link></li>
-              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/products?category=workstation">Workstations</Link></li>
             </ul>
           </div>
 
           <div className="footer-links">
             <h4 className="footer-title">Support</h4>
             <ul>
+              <li><Link to="/faq">FAQ</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/about">About Us</Link></li>
               <li><a href="#">Warranty Information</a></li>
               <li><a href="#">Return Policy</a></li>
               <li><a href="#">Shipping Info</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
 
@@ -91,4 +92,3 @@ function Footer() {
 }
 
 export default Footer
-

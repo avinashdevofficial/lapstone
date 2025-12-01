@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ShoppingCart, Menu, X, Laptop, Search } from 'lucide-react'
+import { ShoppingCart, Menu, X, Laptop, Search, Heart, User } from 'lucide-react'
 import { useCart } from '../App'
 import './Header.css'
 
@@ -27,7 +27,9 @@ function Header() {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/products', label: 'Shop' },
-    { path: '/about', label: 'About' }
+    { path: '/about', label: 'About' },
+    { path: '/contact', label: 'Contact' },
+    { path: '/faq', label: 'FAQ' }
   ]
 
   return (
@@ -69,6 +71,14 @@ function Header() {
           >
             <Search size={20} />
           </button>
+
+          <Link to="/wishlist" className="icon-btn wishlist-btn">
+            <Heart size={20} />
+          </Link>
+
+          <Link to="/login" className="icon-btn user-btn desktop-only">
+            <User size={20} />
+          </Link>
 
           <Link to="/cart" className="icon-btn cart-btn">
             <ShoppingCart size={20} />
@@ -144,6 +154,15 @@ function Header() {
                 </Link>
               </motion.div>
             ))}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+              className="mobile-auth-links"
+            >
+              <Link to="/login" className="nav-link-mobile">Sign In</Link>
+              <Link to="/register" className="nav-link-mobile accent">Create Account</Link>
+            </motion.div>
           </motion.nav>
         )}
       </AnimatePresence>
@@ -152,4 +171,3 @@ function Header() {
 }
 
 export default Header
-
